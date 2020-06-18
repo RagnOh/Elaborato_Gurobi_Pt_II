@@ -9,7 +9,7 @@ import it.unibs.ragno.Utils.Nodo;
 
 public class ReadData {
 
-	
+	//Classe per leggere il file .txt con i nodi
 	public  ArrayList<Nodo>nodi= new ArrayList<Nodo>();
 	
 	private int a;

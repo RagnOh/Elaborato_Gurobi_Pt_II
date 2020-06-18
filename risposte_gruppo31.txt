@@ -1,0 +1,15 @@
+GRUPPO 31
+Componenti: Trovato Eleonora,  Ragnoli Michele
+
+
+QUESITO I:
+funzione obbiettivo = 81858.0
+
+
+QUESITO II:
+funzione obbiettivo senza SEC, CC o MTZ = 107.0
+sottociclo individuato:  non esiste
+
+QUESITO III:
+funzione obbiettivo con MTZ = 158.0   trovata in: 0.3241 sec
+ciclo ottimo: 

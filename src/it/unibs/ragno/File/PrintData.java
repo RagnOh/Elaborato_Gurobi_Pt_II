@@ -21,16 +21,19 @@ public class PrintData {
 	private String nome2;
 	
 	//---------------------------------------------------------------------------------------------------
-	private int valFObbiettivo;
+	private double valFObbiettivo;
 	
 	//------------------------------------------------
-	private int valFObbClean;
+	private double valFObbClean;
 	
 	//-----------------------------------------------------------
 	private ArrayList<Integer>nodi=new ArrayList<Integer>();
 	
 	//----------------------------------------------------------------
-	private int valFObbMTZ;
+	private double valFObbMTZ;
+	
+	//---------------------------------------------------------------
+	private double tempoEsec;
 	
 	//--------------------------------------------------------------
 	private ArrayList<Integer>cicloOttimo=new ArrayList<Integer>();
@@ -49,14 +52,14 @@ public class PrintData {
 	
 	//----------------------------------------------------------------------------------------------------
 	
-	public void getValFObb(int val) {
+	public void setValFObb(double val) {
 		
 		this.valFObbiettivo=val;
 	}
 	
 	//----------------------------------------------------------------------------------------------------
 	
-    public void getValFObbClean(int val) {
+    public void setValFObbClean(double val) {
 		
 		this.valFObbClean=val;
 	}
@@ -70,7 +73,7 @@ public class PrintData {
     
     //------------------------------------------------------------------------
     
-    public void getValFObbMTZ(int val) {
+    public void setValFObbMTZ(double val) {
     	
     	this.valFObbMTZ=val;
     }
@@ -83,6 +86,11 @@ public class PrintData {
     }
     
     //--------------------------------------------------------------------
+    
+    public void setTempo(double t) {
+    	
+    	tempoEsec=t;
+    }
     
 	public void stampaDati() {
 		
@@ -169,6 +177,8 @@ public class PrintData {
     		 bufWriter.write("funzione obbiettivo senza SEC, CC o MTZ = " + valFObbClean);
  			 bufWriter.newLine();
     		 
+ 			 bufWriter.write("sottociclo individuato:  non esiste" );
+ 			 
  			for(i=0;i<nodi.size();i++) {
 				 
  				bufWriter.write(nodi.get(i)+", ");
@@ -192,9 +202,11 @@ public class PrintData {
         	bufWriter.write("QUESITO III:");
  			bufWriter.newLine(); 
         	 
-   		    bufWriter.write("funzione obbiettivo con MTZ = " + valFObbMTZ);
+   		    bufWriter.write("funzione obbiettivo con MTZ = " + valFObbMTZ+ "   trovata in: "+ tempoEsec+ " sec");
 			bufWriter.newLine();
    		 
+			bufWriter.write("ciclo ottimo: ");
+			
 			for(i=0;i<cicloOttimo.size();i++) {
 				 
 				bufWriter.write(cicloOttimo.get(i)+", ");
